@@ -1,6 +1,7 @@
 import pygame
 import os
 import random
+
 pygame.init()
 
 # Global Constants
@@ -159,7 +160,7 @@ class Bird(Obstacle):
     def draw(self, SCREEN):
         if self.index >= 9:
             self.index = 0
-        SCREEN.blit(self.image[self.index//5], self.rect)
+        SCREEN.blit(self.image[self.index // 5], self.rect)
         self.index += 1
 
 
@@ -263,4 +264,5 @@ def menu(death_count):
                 main()
 
 
-menu(death_count=0)
+if __name__ == '__main__':
+    menu(death_count=0)
